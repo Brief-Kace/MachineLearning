@@ -24,7 +24,7 @@ def main():
     data_train, data_test, targets_train, targets_test = train_test_split( iris.data, iris.target, test_size=0.3,
                                                                                   random_state=56)
     #print(data_train[0])
-    new_network = network(2000, [4,4], 1, data_train, targets_train, data_test, targets_test)
+    new_network = network(1000, [ 3, 3], 1, data_train, targets_train, data_test, targets_test, 56)
     new_network.classify_multiple(data_test)
     new_network.train()
 

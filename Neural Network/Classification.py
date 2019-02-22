@@ -3,7 +3,7 @@ from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 import numpy as np
-
+3
 from sklearn.preprocessing import normalize
 import pandas
 import numpy
@@ -52,11 +52,10 @@ def main():
     #print(iris_target)
 
     data_train, data_test, targets_train, targets_test = train_test_split( data, classes, test_size=0.6,
-
                                                                                   random_state=56)
     classes_test=targets_test
     #print(data_train[0])
-    new_network = network(50, [2], 1, data_train, targets_train, data_test, targets_test)
+    new_network = network(200, [20, 20, 20], 1, data_train, targets_train, data_test, targets_test, 56)
     new_network.train()
     classes_predicted = new_network.classify_multiple(data_test)
 
